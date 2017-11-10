@@ -28,7 +28,6 @@ Eksempler:
 ```
     5 + 30 * 20 = 605
     (5 + 30) * 20 = 700
-    ((5 + 30) * 20) / 10 = 70.0
   ```
 ## Variabler
 En variabel er en måte å lagre en verdi med et navn. Som man ser av navnet "variabel" så kan verdien variere, - man tilordner en verdi med å "sette variabelen lik" den verdien man vil den skal ha. Eksempel:
@@ -36,7 +35,14 @@ En variabel er en måte å lagre en verdi med et navn. Som man ser av navnet "va
 score = 25
 player_name = "Player One"
 ```
-Legg merke til at det er brukt " (anførselstegn) rundt ``Player One``. Dette gjør at Python forstår at variabelen vi har laget skal være en tekst (på engelsk "string"). Mens for ``25``så er det ikke anførselstegn, dermed vil Python behandle det som et heltall "int" (engelsk forkortelse for Integer).
+Legg merke til at det er brukt ``"`` (anførselstegn) rundt ``Player One``. Dette gjør at Python forstår at variabelen vi har laget skal være en tekst (på engelsk *string*). Mens for ``25``så er det ikke anførselstegn, dermed vil Python behandle det som et heltall ``int`` (forkortelse av engelsk *integer*).
+
+En ``string`` variabel kan også lages med enkel apostrof ``'``, men må man alltid starte og slutte med samme type tegn, så f.eks:
+```python
+player_name = "Pastor Tim" # OK, bruker bare anførselstegn
+player_name = 'Pastor Tim' # OK, bruker bare apostrof
+player_name = 'Pastor Tim" # Ikke OK, blander apostof og anførselstegn
+```
 
 En variabel kan også inneholde flere elementer, se [liste](#lister)
 ## Skriv ut tekst på skjerm
@@ -61,7 +67,7 @@ choice = input("Please enter your choice: ")
 ```
 Det brukeren skriver inn blir lagret i variabelen choice
 ### Gjør om input til tall
-Når man bruker input blir det lagret som "tekst". For å gjøre det om til tall brukes funksjon ``int``
+Når man bruker ``input`` blir det lagret som "tekst". For å gjøre det om til tall brukes funksjon ``int``
 ```python
 choice = int(input("Please enter your choice: "))
 ```

@@ -1,4 +1,10 @@
-﻿# Python - teori og huskeliste
+# Python - teori og huskeliste
+
+- [Beregninger og operatorer](#beregninger-og-operatorer)
+- [Skriv ut tekst på skjerm](#skriv-ut-tekst-på-skjerm)
+- [Les inn tekst / tall fra bruker](#les-inn-tekst--tall-fra-bruker)
+- [Tester (if)](#tester-if)
+- [Funksjoner](#funksjoner)
 
 ## Beregninger og operatorer
 

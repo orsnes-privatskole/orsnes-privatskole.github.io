@@ -2,6 +2,7 @@
 
 - [Beregninger og operatorer](#beregninger-og-operatorer)
 - [Variabler](#variabler)
+- [Kommentar-setninger](#kommentar-setninger)
 - [Skriv ut tekst på skjerm](#skriv-ut-tekst-på-skjerm)
 - [Les inn tekst / tall fra bruker](#les-inn-tekst--tall-fra-bruker)
 - [Logiske tester](#logiske-tester)
@@ -43,8 +44,18 @@ player_name = "Pastor Tim" # OK, bruker bare anførselstegn
 player_name = 'Pastor Tim' # OK, bruker bare apostrof
 player_name = 'Pastor Tim" # Ikke OK, blander apostof og anførselstegn
 ```
-
 En variabel kan også inneholde flere elementer, se [liste](#lister)
+
+## Kommentar-setninger
+Når man skriver kode så skriver man kommandoer til en datamaskin. Men det er også nyttig å kunne kommentere koden for en menneskelig leser. Den neste som leser koden kan raskere forstå hva som er tenkt med noe kode, selv om det virker opplagt for den som skriver koden i øyeblikket. Den neste som leser koden kan være deg selv om noen måneder...
+
+I Python lages kommentarer med ``#`` tegnet. Alt som kommer bak det tegnet blir ikke lest av Python, men er der kun for en menneskelig leser.
+
+Eksempel:
+```python
+# Dette er en hel linje med kommentar
+player_name = "Player One" # Dette forklarer det som står til venstre på samme linje
+```
 ## Skriv ut tekst på skjerm
 ```python
 print("Tekst som skal skrives ut")

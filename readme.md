@@ -9,6 +9,7 @@
 - [Lister](#lister)
 - [Funksjoner](#funksjoner)
 - [Løkker](#løkker)
+- [Tilfeldige tall](#tilfeldige-tall)
 
 ## Beregninger og operatorer
 
@@ -56,6 +57,17 @@ Eksempel:
 # Dette er en hel linje med kommentar
 player_name = "Player One" # Dette forklarer det som står til venstre på samme linje
 ```
+
+For å lage kommentarer som går over flere linjer kan man bruke tre enkle apostrof tegn: ``'''``. Kommentaren avsluttes på samme måte, f.eks. slik:
+
+```python
+'''
+Dette er en kommentar som går over
+flere
+linjer
+'''
+```
+
 ## Skriv ut tekst på skjerm
 ```python
 print("Tekst som skal skrives ut")
@@ -202,8 +214,15 @@ while True:
 		break;
 print("Hey, the loop did not go on forever?!")
 ```                                                                                                                                                                                                                                                                     
+## Tilfeldige tall
+For å bruke tilfeldige tall må vi ta inn modulen ``random``. Der finnes en funksjon ``randint`` som gir oss et tilfeldig heltall i et gitt intervall mellom to tall. For eksempel for å simulere en terning, så vil vi ha tilfeldige tall mellom 1 og 6:
 
+```python
+import random
 
+dice_result = random.randint(1, 6)
+print(dice_result)
 
-
+```          
+Her bruker vi ``randint(1, 6)`` til å lagre et tilfeldig tall mellom 1 og 6 i variabelen ``dice_result``.
 

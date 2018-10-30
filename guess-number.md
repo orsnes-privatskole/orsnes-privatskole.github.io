@@ -7,7 +7,6 @@ Oppgaven er delt i flere del-oppgaver som bygger videre på de første delene. S
 Hver del har et løsningsforslag, men vent med å se på det til du har *prøvd* selv først! Bruk oversikten på [https://orsnes-privatskole.github.io/](https://orsnes-privatskole.github.io/) for å se hvordan man gjør de forskjellige tingene som trengs for å løse hver deloppgave.
 
 ## Del A – Start spillet
-- Skriv en tittel med hva spillet heter, f.eks. «Guess Number Game v 0.1»
 - Be spilleren skrive inn navnet sitt, og lagre det i en variabel
 - Skriv en velkomst-tekst som ønsker spilleren velkommen, med bruk av spillerens navn
 

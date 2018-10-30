@@ -112,6 +112,7 @@ Vi vil også gi brukeren tilbakemelding på om svaret var for høyt eller lavt. 
 
 ### Relevant avsnitt fra hjelpeteksten:
 - [Løkker](https://orsnes-privatskole.github.io/#l%C3%B8kker)
+- [Beregninger og operatorer](https://orsnes-privatskole.github.io/#beregninger-og-operatorer)
 - [Logiske tester](https://orsnes-privatskole.github.io/#logiske-tester)
 
 <details>
@@ -128,6 +129,9 @@ name = input("What is your name? ")
 print(f"Hello {name}, lets play the game Guess number!")
 
 time.sleep(1)
+
+# Pick a random number between 1 and 10
+secret_number = random.randint(1, 10)
 
 # Let the player guess repeatedly until he or she gets it right
 player_guess = 0
@@ -154,9 +158,118 @@ while not player_guess == secret_number:
 Det er særlig to ting som kan påvirke vanskelighetsgraden i dette spillet: Hvor mange tall det velges fra, og hvor mange forsøk spilleren får på å gjette.
 La spilleren velge vanskelighetsgrad i starten av spillet, f.eks.:
 
-1. Lett (tall fra 1 til 20, 10 forsøk)
-2. Middels (tall fra 1 til 100, 10 forsøk)
-3. Vanskelig (tall fra 1 til 100, 5 forsøk)
-4. Svært vanskelig (tall fra 1 til 1000, 10 forsøk)
+1. Lett (tall fra 1 til 10, 10 forsøk)
+2. Middels (tall fra 1 til 20, 5 forsøk)
+3. Vanskelig (tall fra 1 til 30, 3 forsøk)
 
 For hvert forsøk kan det skrives ut hvor mange forsøk som er brukt og hvor mange som er igjen.
+
+Nå begynner koden å bli mer kompleks så det kan være fornuftig å bruke funksjoner. På den måten kan vi "gjenbruke" koden flere steder. Vi kan for eksempel lage følgende funksjoner:
+
+- Skriv ut meny: ``print_menu()``
+- Gjennomfør spill: ``play_game()``
+
+For eksempel i funksjonen ``play_game()`` så kan vi gjennomføre spillet som i forrige versjon, men nå med ulike verdier på hva maks tall kan være og antall forsøk, basert på valgt vanskelighetsgrad.
+
+### Relevant avsnitt fra hjelpeteksten:
+- [Variabler](https://orsnes-privatskole.github.io/#variabler)
+- [Funksjoner](https://orsnes-privatskole.github.io/#funksjoner)
+
+<details>
+<summary>Løsningsforslag E</summary>
+
+```python
+# The guess number game
+# Made by: 
+# Version E
+import time
+import random
+
+
+def print_menu():
+    menu_width = 37
+    print(menu_width * "-")
+    print("* Welcome to the guess number game *")
+    print(menu_width * "-")
+    print("* 1 - Easy")
+    print("* 2 - Intermediate")
+    print("* 3 - Hard")
+    print(menu_width * "-")
+    print("* 4 - Quit game")
+    print(menu_width * "=")
+
+
+max_retries = 5  # How many attempt the user gets to guess the correct number
+max_number = 10  # What will be the largest number the user can guess (larger number means more difficult)
+
+
+def play_game():
+    secret_number = random.randint(1, max_number)
+    number_of_guesses = 0
+    while number_of_guesses < max_retries:
+        player_guess = int(input(f"I am thinking of a number between 1 and {max_number}, can you guess which number? "))
+        number_of_guesses += 1  # Count number of guesses
+
+        # Check player answer
+        if player_guess == secret_number:
+            print(f"WOW, you are good! The answer is correct, you made it using {number_of_guesses} attempts!")
+            return
+        else:
+            if player_guess > secret_number:
+                print("Sorry, that was wrong, your guess was too high!")
+            else:
+                print("Sorry, that was wrong, your guess was too low!")
+
+            guesses_left = max_retries - number_of_guesses
+
+            if guesses_left > 0:
+                print(f"Please try again... you have {guesses_left} more guesses\n\n")
+            else:
+                print(f"Sorry, you failed. No more guesses. The number was {secret_number}.")
+                return
+
+            time.sleep(1)
+
+
+name = input("What is your name? ")
+print(f"Hello {name}, lets play the game Guess number!\n")
+
+time.sleep(1)
+
+player_choice = 0
+
+while not player_choice == 4:
+    print_menu()
+
+    # Ask player for which menu option they want
+    player_choice = int(input("Please choose: "))
+
+    if player_choice == 1:
+        max_retries = 10
+        max_number = 10
+        print("OK, you chose the easy option")
+        print(f"Easy: you will guess a number between 1 and {max_number}, with {max_retries} attempts.")
+        play_game()
+
+    elif player_choice == 2:
+        max_retries = 5
+        max_number = 20
+        print("You chose the intermediate option, not bad")
+        print(f"Intermediate: you will guess a number between 1 and {max_number}, with {max_retries} attempts.")
+        play_game()
+
+    elif player_choice == 3:
+        max_retries = 3
+        max_number = 30
+        print("WOW, you chose the HARD option, well you have been warned!")
+        print(f"Hard: you will guess a number between 1 and {max_number}, with {max_retries} attempts.")
+        play_game()
+
+    elif player_choice == 4:
+        print(f"You want to quit? OK, it was nice playing with you {name}")
+
+    else:
+        print("That is not a valid option, please use 1, 2, 3 or 4\n\n")
+```
+
+</details>

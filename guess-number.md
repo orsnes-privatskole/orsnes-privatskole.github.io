@@ -108,6 +108,48 @@ else:
 ## Del D – La spilleren få flere forsøk
 Å gjette riktig på første forsøk kan være litt vel flaks-basert, så vi må la spilleren prøve flere gang. Lag en løkke som lar spilleren gjette helt til riktig svar er gitt.
 
+Vi vil også gi brukeren tilbakemelding på om svaret var for høyt eller lavt. Her kan vi bruke flere logiske tester, så om svaret ikke er nøyaktig riktig, så sjekker vi om det er *større* eller *mindre enn* riktig svar.
+
+### Relevant avsnitt fra hjelpeteksten:
+- [Løkker](https://orsnes-privatskole.github.io/#l%C3%B8kker)
+- [Logiske tester](https://orsnes-privatskole.github.io/#logiske-tester)
+
+<details>
+<summary>Løsningsforslag D</summary>
+
+```python
+# The guess number game
+# Made by: 
+# Version D
+import time
+import random
+
+name = input("What is your name? ")
+print(f"Hello {name}, lets play the game Guess number!")
+
+time.sleep(1)
+
+# Let the player guess repeatedly until he or she gets it right
+player_guess = 0
+while not player_guess == secret_number:
+    player_guess = int(input("I am thinking of a number between 1 and 10, can you guess which number? "))
+
+    # Check player answer
+    if player_guess == secret_number:
+        print("WOW, you are good! The answer is correct.")
+    else:
+        if player_guess > secret_number:
+            print("Sorry, that was wrong, your guess was too high!")
+        else:
+            print("Sorry, that was wrong, your guess was too low!")
+        print("Please try again...\n\n")
+        time.sleep(1)
+
+```
+
+</details>
+
+
 ## Del E – Vanskelighetsgrad
 Det er særlig to ting som kan påvirke vanskelighetsgraden i dette spillet: Hvor mange tall det velges fra, og hvor mange forsøk spilleren får på å gjette.
 La spilleren velge vanskelighetsgrad i starten av spillet, f.eks.:

@@ -9,6 +9,27 @@ Oppgaven er delt i flere del-oppgaver som bygger videre på de første delene. S
 - Be spilleren skrive inn navnet sitt, og lagre det i en variabel
 - Skriv en velkomst-tekst som ønsker spilleren velkommen, med bruk av spillerens navn
 
+<details>
+<summary>Løsningsforslag A</summary>
+```python
+# The guess number game
+#
+# Version 0.1
+import time
+import random
+
+name = input("What is your name? ")
+print(f"Hello {name}, lets play the game Guess number!")
+
+time.sleep(1)
+
+# Pick a random number between 1 and 10
+secret_number = random.randint(1, 10)
+
+print(f"The random number is {secret_number}")
+```
+</details>
+
 ## Del B – Lag et tilfeldig tall
 Her skal spillet "tenke på et tilfeldig tall". Vi må bestemme oss for hvor stort tallet maks kan være, jo større jo høyere vanskelighetsgrad vil det være på å gjette riktig. For første versjon velger vi at tallet skal være mellom 1 og 20.
 

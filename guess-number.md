@@ -4,17 +4,49 @@ Bruk Python til å lage et spill hvor maskinen velger et tilfeldig tall, og så 
 
 Oppgaven er delt i flere del-oppgaver som bygger videre på de første delene. Så første versjon blir helt enkel, og så bygger vi på med mer funksjoner etter hvert.
 
+Hver del har et løsningsforslag, men vent med å se på det til du har *prøvd* selv først! Bruk oversikten på [https://orsnes-privatskole.github.io/](https://orsnes-privatskole.github.io/) for å se hvordan man gjør de forskjellige tingene som trengs for å løse hver deloppgave.
+
 ## Del A – Start spillet
 - Skriv en tittel med hva spillet heter, f.eks. «Guess Number Game v 0.1»
 - Be spilleren skrive inn navnet sitt, og lagre det i en variabel
 - Skriv en velkomst-tekst som ønsker spilleren velkommen, med bruk av spillerens navn
 
+Relevante avsnitt fra hjelpeteksten:
+- [Skrive ut tekst på skjerm](https://orsnes-privatskole.github.io/#skriv-ut-tekst-p%C3%A5-skjerm)
+- [Les inn tekst / tall fra bruker](https://orsnes-privatskole.github.io/#les-inn-tekst--tall-fra-bruker)
+
 <details>
 <summary>Løsningsforslag A</summary>
+
 ```python
 # The guess number game
-#
+# Made by: 
 # Version 0.1
+import time
+
+name = input("What is your name? ")
+print(f"Hello {name}, lets play the game Guess number!")
+
+time.sleep(1)
+```
+
+</details>
+
+## Del B – Lag et tilfeldig tall
+Her skal spillet "tenke på et tilfeldig tall". Vi må bestemme oss for hvor stort tallet maks kan være, jo større jo høyere vanskelighetsgrad vil det være på å gjette riktig. For første versjon velger vi at tallet skal være mellom 1 og 10.
+
+Lagre det tilfeldige tallet i en variabel og skriv det ut på skjermen (bare for testing, vi kan selvsagt ikke skrive det ut når spilleren skal gjette det :-), men det kommer senere).
+
+Relevant avsnitt fra hjelpeteksten:
+- [Tilfeldige tall](https://orsnes-privatskole.github.io/#tilfeldige-tall)
+
+<details>
+<summary>Løsningsforslag B</summary>
+
+```python
+# The guess number game
+# Made by: 
+# Version 0.2
 import time
 import random
 
@@ -27,15 +59,10 @@ time.sleep(1)
 secret_number = random.randint(1, 10)
 
 print(f"The random number is {secret_number}")
+
 ```
+
 </details>
-
-## Del B – Lag et tilfeldig tall
-Her skal spillet "tenke på et tilfeldig tall". Vi må bestemme oss for hvor stort tallet maks kan være, jo større jo høyere vanskelighetsgrad vil det være på å gjette riktig. For første versjon velger vi at tallet skal være mellom 1 og 20.
-
-Tips: Her må vi bruke modulen random. Funksjonen randint(tall-fra, tall-til) gir deg et tilfeldig tall mellom tall-fra og tall-til. F.eks random.randint(1, 20).
-
-Lagre det tilfeldige tallet i en variabel og skriv det ut på skjermen (bare for testing, vi kan selvsagt ikke skrive det ut når spilleren skal gjette det , men det kommer senere).
 
 ## Del C – La spilleren gjette!
 - Be spilleren gjette hvilket tall du tenker på

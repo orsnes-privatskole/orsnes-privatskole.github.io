@@ -65,11 +65,11 @@ print(f"The random number is {secret_number}")
 
 ## Del C – La spilleren gjette!
 - Be spilleren gjette hvilket tall du tenker på
-- Skriv ut om svaret er riktig, høyere eller lavere enn det tilfeldige tallet
+- Skriv ut om svaret er riktig, eller om det er feil skriver du hva tallet var
 
 Her må vi bruke en logisk test for å sjekke om svaret er riktig. Siden vi skal sammenligne med et tilfeldig *tall*, så er det viktig å gjøre om innlest svar fra tekst til tall.
 
-### Relevant avsnitt fra hjelpeteksten:
+### Relevante avsnitt fra hjelpeteksten:
 - [Logiske tester](https://orsnes-privatskole.github.io/#logiske-tester)
 - [Gjør om input til tall](https://orsnes-privatskole.github.io/#gj%C3%B8r-om-input-til-tall)
 
@@ -109,7 +109,7 @@ else:
 
 Vi vil også gi brukeren tilbakemelding på om svaret var for høyt eller lavt. Her kan vi bruke flere logiske tester, så om svaret ikke er nøyaktig riktig, så sjekker vi om det er *større* eller *mindre enn* riktig svar.
 
-### Relevant avsnitt fra hjelpeteksten:
+### Relevante avsnitt fra hjelpeteksten:
 - [Løkker](https://orsnes-privatskole.github.io/#l%C3%B8kker)
 - [Beregninger og operatorer](https://orsnes-privatskole.github.io/#beregninger-og-operatorer)
 - [Logiske tester](https://orsnes-privatskole.github.io/#logiske-tester)
@@ -170,7 +170,7 @@ Nå begynner koden å bli mer kompleks så det kan være fornuftig å bruke funk
 
 For eksempel i funksjonen ``play_game()`` så kan vi gjennomføre spillet som i forrige versjon, men nå med ulike verdier på hva maks tall kan være og antall forsøk, basert på valgt vanskelighetsgrad.
 
-### Relevant avsnitt fra hjelpeteksten:
+### Relevante avsnitt fra hjelpeteksten:
 - [Variabler](https://orsnes-privatskole.github.io/#variabler)
 - [Funksjoner](https://orsnes-privatskole.github.io/#funksjoner)
 

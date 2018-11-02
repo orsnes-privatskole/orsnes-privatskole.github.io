@@ -107,6 +107,18 @@ Når man bruker ``input`` blir det lagret som "tekst". For å gjøre det om til 
 choice = int(input("Please enter your choice: "))
 ```
 
+#### Verifiser om input er tall før omgjøring
+Funksjonen ``int()`` vil feile om vi prøver å bruke den på noe som ikke er mulig å gjøre om til tall. For å sikre at det er et tall før man bruker ``int()``, så kan vi bruke den innebygde funksjonen ``isdigit()`` først:
+
+```python
+number_input = input("Please input a number: ")
+if number_input.isdigit():
+	# We know this is a number, and can convert the variable using int()
+	number_input = int(number_input)
+else:
+	# The input was not a number
+```
+
 ## Logiske tester
 Sjekk om et logisk uttrykk er sant med kommandoen ``if``. Kan teste på variable av typen Boolean (True eller False), matematiske som uttrykk (større enn >, mindre enn <), eller med logiske operatorer som ``and``og ``or``.
 ```python

@@ -2,6 +2,7 @@
 
 - [Beregninger og operatorer](#beregninger-og-operatorer)
 - [Variabler](#variabler)
+- [Variabel typer](#variabel-typer)
 - [Kommentar-setninger](#kommentar-setninger)
 - [Skriv ut tekst på skjerm](#skriv-ut-tekst-på-skjerm)
 - [Les inn tekst / tall fra bruker](#les-inn-tekst--tall-fra-bruker)
@@ -46,6 +47,17 @@ player_name = 'Pastor Tim' # OK, bruker bare apostrof
 player_name = 'Pastor Tim" # Ikke OK, blander apostof og anførselstegn
 ```
 En variabel kan også inneholde flere elementer, se [liste](#lister)
+
+### Variabel typer
+Som vi ser i dette avsnittet skiller vi mellom ulike typer variabler. Det finnes også andre typer enn ``string`` og ``int``:
+
+Variabel type| Engelsk| Python | Eksempel på verdier
+-------------|--------|--------|------------
+[Heltall](https://no.wikipedia.org/wiki/Heltall)| [Integer](https://en.wikipedia.org/wiki/Integer)|``int``| 42, 23456, 1, -13
+[Flyttall](https://no.wikipedia.org/wiki/Flyttall)| [Floating point](https://en.wikipedia.org/wiki/Real_number)|``float``| 23.1, 334.2, -42.1
+Tekst| String| ``str``| "Hello", 'World'
+[Boolsk](https://no.wikipedia.org/wiki/Boolsk_variabel)| [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type) | ``bool``| True, False
+ 
 
 ## Kommentar-setninger
 Når man skriver kode så skriver man kommandoer til en datamaskin. Men det er også nyttig å kunne kommentere koden for en menneskelig leser. Den neste som leser koden kan raskere forstå hva som er tenkt med noe kode, selv om det virker opplagt for den som skriver koden i øyeblikket. Den neste som leser koden kan være deg selv om noen måneder...

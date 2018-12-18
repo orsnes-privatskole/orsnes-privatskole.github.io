@@ -1,3 +1,5 @@
+[Kodetimen 2018](https://orsnes-privatskole.github.io/kodetimen)
+
 # Python - teori og huskeliste
 
 - [Beregninger og operatorer](#beregninger-og-operatorer)
